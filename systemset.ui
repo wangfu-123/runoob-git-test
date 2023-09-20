@@ -1,0 +1,1701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SystemSet</class>
+ <widget class="QWidget" name="SystemSet">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>818</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SystemSet</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color:rgb(228, 231, 239);
+}
+
+QPushButton{
+	width:50;
+	height:30;
+	background-color:qlineargradient(spread:pad, x1:0,y1:0, x2:0, y2:1, stop:0 rgb(255, 255, 255),stop:1 rgb(192, 201, 214));
+	border-radius:10px;
+	border:1px solid #aaaaaa;
+}
+
+QPushButton::hover{
+	border:2px solid rgb(133, 148, 197);
+}
+
+QPushButton:pressed
+{
+	color:black;
+	background-color:rgb(204 , 228 , 247);
+	border: 1px solid rgb(1 , 84 , 153);
+	padding-left:3px;
+	padding-top:3px;
+}
+
+QComboBox
+{
+	background-color: white;
+}
+
+QComboBox::drop-down 
+{
+	image: url(:/image/drop_down.png); 
+}
+
+QComboBox::drop-down:on 
+{
+	padding-left:2px;
+	padding-top:2px;
+	image: url(:/image/drop_down.png); 
+}
+
+QComboBox QAbstractItemView 
+{
+    outline: 0px solid gray;   /* 选定项的虚框 */
+    background-color: white;   /* 整个下拉窗体的背景色 */
+}
+
+QLineEdit
+{
+	
+	background-color: rgb(255, 255, 255);
+}
+</string>
+  </property>
+  <layout class="QGridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>1000</width>
+       <height>800</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei</family>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab{
+	width:150;
+	height:30;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+QTabBar::tab{
+    color:#000000;
+    padding:3px 8px 3px 8px;
+    background-color:qlineargradient(spread:pad, x1:0, 			y1:0, x2:0, y2:1, stop:0 rgb(255, 255, 255), 	   		stop:1 rgb(192, 201, 214));
+    border-bottom:none;
+	border-top:1px solid #111111;
+	border-left:1px solid #aaaaaa;
+	border-right:1px solid #aaaaaa;
+    margin-bottom:1px;
+}
+QTabBar::tab:selected{
+    background-color:rgb(133, 148, 197);
+	border-bottom:none;
+	border-top:1px solid rgb(133, 148, 197);
+	border-left:1px solid rgb(133, 148, 197);
+	border-right:1px solid rgb(133, 148, 197);
+    margin-bottom:1px;
+}
+QTabBar::tab:!selected{
+	border-bottom:none;
+	border-top:1px solid #111111;
+	border-left:1px solid #aaaaaa;
+	border-right:1px solid #aaaaaa;
+    margin-bottom:1px;
+}
+</string>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhMultiLine</set>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="usesScrollButtons">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>SystemSet</string>
+      </attribute>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>29</x>
+         <y>30</y>
+         <width>161</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt;The default sample type&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>509</x>
+         <y>30</y>
+         <width>121</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt;Default sample cup&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>59</x>
+         <y>100</y>
+         <width>131</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt;Sample validity period&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>220</y>
+         <width>121</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt;Reference range set&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>49</x>
+         <y>400</y>
+         <width>141</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt;Biochemical reagents&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>409</x>
+         <y>520</y>
+         <width>221</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt;Number of ISE boot perfusions&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>350</y>
+         <width>141</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt;Margin alarm limit set&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>99</x>
+         <y>520</y>
+         <width>91</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt;Alarm volume&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>439</x>
+         <y>400</y>
+         <width>191</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt;ISE reagent/cleaning solution&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>469</x>
+         <y>290</y>
+         <width>161</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt;Above the reference range&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>19</x>
+         <y>290</y>
+         <width>171</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt;Below the reference range&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>469</x>
+         <y>170</y>
+         <width>161</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Calibri'; font-size:10.5pt;&quot;&gt;Number of interval tests&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_serum_index">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>170</y>
+         <width>161</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Automatic serum index</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_needle_clean">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>110</y>
+         <width>251</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sample needle intensive cleaning</string>
+       </property>
+      </widget>
+      <widget class="Line" name="line">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>225</y>
+         <width>811</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line_2">
+       <property name="geometry">
+        <rect>
+         <x>149</x>
+         <y>355</y>
+         <width>811</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line_3">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>480</y>
+         <width>920</width>
+         <height>2</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_sample_type">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>30</y>
+         <width>180</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>10</pointsize>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>serum</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>plasma</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>urine</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>cerebral medullary fluid</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>other</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="comboBox_sample_cup">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>30</y>
+         <width>150</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="maxVisibleItems">
+        <number>10</number>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>standard</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>microcup</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QSlider" name="Slider_alarm_volume">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>520</y>
+         <width>150</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_F1">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>690</y>
+         <width>100</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>InstrumentSet
+F1</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_F3">
+       <property name="geometry">
+        <rect>
+         <x>265</x>
+         <y>690</y>
+         <width>100</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PrintSet
+F3</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_F5">
+       <property name="geometry">
+        <rect>
+         <x>505</x>
+         <y>690</y>
+         <width>100</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>LIS_Set
+F5</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_F4">
+       <property name="geometry">
+        <rect>
+         <x>385</x>
+         <y>690</y>
+         <width>100</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BarcodeSet
+F4</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_F7_cancel">
+       <property name="geometry">
+        <rect>
+         <x>745</x>
+         <y>690</y>
+         <width>100</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cancel
+F7</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_F8_save">
+       <property name="geometry">
+        <rect>
+         <x>865</x>
+         <y>690</y>
+         <width>100</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save
+F8</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_F6">
+       <property name="geometry">
+        <rect>
+         <x>625</x>
+         <y>690</y>
+         <width>100</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>UserSet
+F6</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_F2">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>690</y>
+         <width>100</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>FactorySet
+F2</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_perfusion_num">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>520</y>
+         <width>150</width>
+         <height>30</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_bio_reagent">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>400</y>
+         <width>150</width>
+         <height>30</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_ISE_reagent">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>400</y>
+         <width>150</width>
+         <height>30</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_above_range">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>290</y>
+         <width>150</width>
+         <height>30</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_test_num">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>170</y>
+         <width>150</width>
+         <height>30</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_validity_period">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>100</y>
+         <width>150</width>
+         <height>30</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_below_range">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>290</y>
+         <width>150</width>
+         <height>30</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>100</y>
+         <width>50</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>day</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>810</x>
+         <y>400</y>
+         <width>50</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>%</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_tcp">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>610</y>
+         <width>251</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Socket status：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>610</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Language&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_language">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>610</y>
+         <width>150</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="maxVisibleItems">
+        <number>10</number>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>Chinese</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>English</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="widget">
+      <attribute name="title">
+       <string>State</string>
+      </attribute>
+      <widget class="QTabWidget" name="tabWidget_state">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1000</width>
+         <height>670</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTabBar::tab{width:100}</string>
+       </property>
+       <property name="currentIndex">
+        <number>5</number>
+       </property>
+       <widget class="QWidget" name="system">
+        <attribute name="title">
+         <string>System</string>
+        </attribute>
+        <widget class="QTableWidget" name="tableWidget_state_system">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1000</width>
+           <height>650</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QHeaderView::section      
+{
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom:1px solid #aaaaaa;
+    background-color:rgb(228, 231, 239);
+}
+QTableWidget{
+	border:1px solid #242424;
+	
+}
+
+QTableView {                                                      
+    alternate-background-color: rgb(249, 249, 249);
+    selection-background-color: rgb(133, 148, 197);   
+}
+</string>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="autoScrollMargin">
+          <number>10</number>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="dragEnabled">
+          <bool>false</bool>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="showGrid">
+          <bool>false</bool>
+         </property>
+         <property name="gridStyle">
+          <enum>Qt::SolidLine</enum>
+         </property>
+         <property name="cornerButtonEnabled">
+          <bool>true</bool>
+         </property>
+         <property name="rowCount">
+          <number>20</number>
+         </property>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>490</number>
+         </attribute>
+         <attribute name="horizontalHeaderHighlightSections">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>20</number>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <column>
+          <property name="text">
+           <string>Inspection system</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>State</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="count">
+        <attribute name="title">
+         <string>Count</string>
+        </attribute>
+        <widget class="QTableWidget" name="tableWidget_state_count">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1000</width>
+           <height>650</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QHeaderView::section      
+{
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom:1px solid #aaaaaa;
+    background-color:rgb(228, 231, 239);
+}
+QTableWidget{
+	border:1px solid #242424;
+	
+}
+
+QTableView {                                                      
+    alternate-background-color: rgb(249, 249, 249);
+    selection-background-color: rgb(133, 148, 197);   
+}
+</string>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="showGrid">
+          <bool>false</bool>
+         </property>
+         <property name="rowCount">
+          <number>20</number>
+         </property>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>490</number>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>20</number>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <column>
+          <property name="text">
+           <string>Name</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Number</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="temperature">
+        <attribute name="title">
+         <string>Temperature</string>
+        </attribute>
+        <widget class="QTableWidget" name="tableWidget_state_temperature">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1000</width>
+           <height>650</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QHeaderView::section      
+{
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom:1px solid #aaaaaa;
+    background-color:rgb(228, 231, 239);
+}
+QTableWidget{
+	border:1px solid #242424;
+	
+}
+
+QTableView {                                                      
+    alternate-background-color: rgb(249, 249, 249);
+    selection-background-color: rgb(133, 148, 197);   
+}
+</string>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="showGrid">
+          <bool>false</bool>
+         </property>
+         <property name="rowCount">
+          <number>20</number>
+         </property>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>327</number>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>20</number>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <column>
+          <property name="text">
+           <string>Name</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Measured value</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Valid range</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="power">
+        <attribute name="title">
+         <string>Power supply</string>
+        </attribute>
+        <widget class="QTableWidget" name="tableWidget__state_power">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1000</width>
+           <height>650</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QHeaderView::section      
+{
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom:1px solid #aaaaaa;
+    background-color:rgb(228, 231, 239);
+}
+QTableWidget{
+	border:1px solid #242424;
+	
+}
+
+QTableView {                                                      
+    alternate-background-color: rgb(249, 249, 249);
+    selection-background-color: rgb(133, 148, 197);   
+}
+</string>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="showGrid">
+          <bool>false</bool>
+         </property>
+         <property name="rowCount">
+          <number>20</number>
+         </property>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>327</number>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>20</number>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <column>
+          <property name="text">
+           <string>Name</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Measured value</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Valid range</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="liquid">
+        <attribute name="title">
+         <string>Liquid path</string>
+        </attribute>
+        <widget class="QTableWidget" name="tableWidget_state_liquid">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1000</width>
+           <height>650</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QHeaderView::section      
+{
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom:1px solid #aaaaaa;
+    background-color:rgb(228, 231, 239);
+}
+QTableWidget{
+	border:1px solid #242424;
+	
+}
+
+QTableView {                                                      
+    alternate-background-color: rgb(249, 249, 249);
+    selection-background-color: rgb(133, 148, 197);   
+}
+</string>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="showGrid">
+          <bool>false</bool>
+         </property>
+         <property name="rowCount">
+          <number>20</number>
+         </property>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>490</number>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>20</number>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <column>
+          <property name="text">
+           <string>Name</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>State</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_9">
+        <attribute name="title">
+         <string>Reaction vessel</string>
+        </attribute>
+        <widget class="QTableView" name="tableView_reaction_vessel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1000</width>
+           <height>650</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QHeaderView::section      
+{
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom:1px solid #aaaaaa;
+    background-color:rgb(228, 231, 239);
+}
+QTableWidget{
+	border:1px solid #242424;
+	
+}
+
+QTableView {                                                      
+    alternate-background-color: rgb(249, 249, 249);
+    selection-background-color: rgb(133, 148, 197);   
+}</string>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::DoubleClicked</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectItems</enum>
+         </property>
+         <property name="textElideMode">
+          <enum>Qt::ElideRight</enum>
+         </property>
+         <property name="showGrid">
+          <bool>false</bool>
+         </property>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>327</number>
+         </attribute>
+         <attribute name="horizontalHeaderHighlightSections">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>22</number>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="lower">
+        <attribute name="title">
+         <string>Lower computer</string>
+        </attribute>
+        <widget class="QTableWidget" name="tableWidget_state_lower">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1000</width>
+           <height>650</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QHeaderView::section      
+{
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom:1px solid #aaaaaa;
+    background-color:rgb(228, 231, 239);
+}
+QTableWidget{
+	border:1px solid #242424;
+	
+}
+
+QTableView {                                                      
+    alternate-background-color: rgb(249, 249, 249);
+    selection-background-color: rgb(133, 148, 197);   
+}
+</string>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="showGrid">
+          <bool>false</bool>
+         </property>
+         <property name="rowCount">
+          <number>20</number>
+         </property>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>490</number>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>20</number>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <row/>
+         <column>
+          <property name="text">
+           <string>Name</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>State</string>
+          </property>
+          <property name="textAlignment">
+           <set>AlignLeading|AlignVCenter</set>
+          </property>
+         </column>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btn_state_add">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>690</y>
+         <width>100</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>New</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_state_delete">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>690</y>
+         <width>100</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Delete</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_state_save">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>690</y>
+         <width>100</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Graph</string>
+      </attribute>
+      <widget class="QCustomPlot" name="plot_graph" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1000</width>
+         <height>600</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_graph_add">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>670</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>add data</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_graph_data">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>670</y>
+         <width>113</width>
+         <height>30</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_graph_xy">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>670</y>
+         <width>250</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>17</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>x: -y:</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header location="global">qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
